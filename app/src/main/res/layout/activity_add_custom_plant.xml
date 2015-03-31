@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollView"
+    android:layout_gravity="right">
+
+    <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:background="@color/background_gray"
+                  android:orientation="vertical">
+
+        <RelativeLayout
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+            android:background="@android:color/white">
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Plant Information"
+                android:id="@+id/plant_info_text"/>
+
+            <EditText
+                android:hint="Plant Name"
+                android:textSize="20sp"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/plant_name_field"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+            android:background="@android:color/white">
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time of Plant"
+                android:id="@+id/plant_time_text"/>
+
+            <EditText
+                android:hint="Planting Date"
+                android:textSize="20sp"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:ems="10"
+                android:id="@+id/plant_date_field"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"/>
+
+            <!--<DatePicker-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/datePicker"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_centerHorizontal="true"/>-->
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+            android:background="@android:color/white">
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location of Plant"
+                android:id="@+id/plant_location_text"/>
+
+            <RadioGroup
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                android:id="@+id/outdoor_radio_group">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Is plant outdoors?"
+                    android:id="@+id/plant_outdoor_info"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:id="@+id/outdoor_radio"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:id="@+id/indoor_radio"/>
+
+            </RadioGroup>
+
+            <EditText
+                android:hint="Location of Planting"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/plant_location_field"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:layout_below="@+id/outdoor_radio_group"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:inputType="textPostalAddress"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/add_plant_button_text"
+            android:id="@+id/add_plant_button"
+            android:background="@color/seedit_green"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+</ScrollView>

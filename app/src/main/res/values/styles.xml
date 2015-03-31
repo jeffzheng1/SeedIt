@@ -1,0 +1,109 @@
+<resources>
+
+    <!-- Base application theme. -->
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorAccent">@color/nliveo_green_colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/nliveo_green_colorPrimaryDark</item>
+        <item name="actionBarItemBackground">@drawable/selectable_background_actionbarseedit</item>
+        <item name="popupMenuStyle">@style/PopupMenu.Actionbarseedit</item>
+        <item name="dropDownListViewStyle">@style/DropDownListView.Actionbarseedit</item>
+        <item name="actionBarTabStyle">@style/ActionBarTabStyle.Actionbarseedit</item>
+        <item name="actionDropDownStyle">@style/DropDownNav.Actionbarseedit</item>
+        <item name="actionBarStyle">@style/ActionBar.Solid.Actionbarseedit</item>
+        <item name="actionModeBackground">@drawable/cab_background_top_actionbarseedit</item>
+        <item name="actionModeSplitBackground">@drawable/cab_background_bottom_actionbarseedit</item>
+        <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Actionbarseedit</item>
+        <!--<item name="background">@color/nliveo_green_colorPrimary</item>-->
+        <!--<item name="backgroundStacked">@color/nliveo_green_colorPrimaryDark</item>-->
+        <!--<item name="backgroundSplit">@color/nliveo_green_alpha_colorPrimaryDark</item>-->
+        <item name="progressBarStyle">@style/ProgressBar.Actionbarseedit</item>
+        <!--<item name="android:actionBarStyle">@style/MyActionBar</item>-->
+        <item name="android:windowActionBarOverlay">true</item>
+    </style>
+
+    <style name="login_button">
+        <item name="android:layout_width">@dimen/login_button_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+     <style name="Theme.Actionbarseedit" parent="@style/Theme.AppCompat.Light">
+        <item name="actionBarItemBackground">@drawable/selectable_background_actionbarseedit</item>
+        <item name="popupMenuStyle">@style/PopupMenu.Actionbarseedit</item>
+        <item name="dropDownListViewStyle">@style/DropDownListView.Actionbarseedit</item>
+        <item name="actionBarTabStyle">@style/ActionBarTabStyle.Actionbarseedit</item>
+        <item name="actionDropDownStyle">@style/DropDownNav.Actionbarseedit</item>
+        <item name="actionBarStyle">@style/ActionBar.Solid.Actionbarseedit</item>
+        <item name="actionModeBackground">@drawable/cab_background_top_actionbarseedit</item>
+        <item name="actionModeSplitBackground">@drawable/cab_background_bottom_actionbarseedit</item>
+        <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Actionbarseedit</item>
+
+
+    </style>
+
+    <style name="ActionBar.Solid.Actionbarseedit" parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
+        <item name="background">@color/nliveo_green_colorPrimary</item>
+        <item name="backgroundStacked">@color/nliveo_green_colorPrimaryDark</item>
+        <item name="backgroundSplit">@color/nliveo_green_alpha_colorPrimaryDark</item>
+        <item name="progressBarStyle">@style/ProgressBar.Actionbarseedit</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Actionbarseedit" parent="@style/Widget.AppCompat.Light.ActionBar">
+        <item name="background">@drawable/ab_transparent_actionbarseedit</item>
+        <item name="progressBarStyle">@style/ProgressBar.Actionbarseedit</item>
+    </style>
+
+    <style name="PopupMenu.Actionbarseedit" parent="@style/Widget.AppCompat.Light.PopupMenu">   
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_actionbarseedit</item>   
+    </style>
+    
+    <style name="DropDownListView.Actionbarseedit" parent="@style/Widget.AppCompat.Light.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_actionbarseedit</item>
+    </style>
+
+    <style name="ActionBarTabStyle.Actionbarseedit" parent="@style/Widget.AppCompat.Light.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_actionbarseedit</item>
+    </style>
+    
+    <style name="DropDownNav.Actionbarseedit" parent="@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar">
+        <item name="android:background">@drawable/spinner_background_ab_actionbarseedit</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_actionbarseedit</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_actionbarseedit</item>
+    </style>
+    
+    <style name="ProgressBar.Actionbarseedit" parent="@style/Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_actionbarseedit</item>
+    </style>
+    
+    <style name="ActionButton.CloseMode.Actionbarseedit" parent="@style/Widget.AppCompat.Light.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_actionbarseedit</item>
+    </style>
+    
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.Actionbarseedit.Widget" parent="@style/Theme.AppCompat">
+        <item name="popupMenuStyle">@style/PopupMenu.Actionbarseedit</item>
+        <item name="dropDownListViewStyle">@style/DropDownListView.Actionbarseedit</item>
+    </style>
+
+    <style name="nLiveoDrawer" parent="nLiveo.Theme.DarkActionBar">
+        <item name="colorPrimary">@color/nliveo_green_colorPrimary</item>
+        <item name="colorAccent">@color/nliveo_green_alpha_colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/nliveo_green_colorPrimaryDark</item>
+    </style>
+
+    <!--<style name="MyActionBar" parent="@style/Widget.AppCompat.Light.ActionBar">-->
+        <!--<item name="android:titleTextStyle">@style/MyTheme.ActionBar.TitleTextStyle</item>-->
+        <!--<item name="titleTextStyle">@style/MyTheme.ActionBar.TitleTextStyle</item>-->
+        <!--<item name="android:background">@color/nliveo_green_colorPrimary</item>-->
+
+    <!--</style>-->
+
+    <!--<style name="MyTheme.ActionBar.TitleTextStyle" parent="@android:style/TextAppearance">-->
+        <!--<item name="android:textColor">@color/seedit_green</item>-->
+        <!--<item name="android:textSize">24sp</item>-->
+    <!--</style>-->
+
+
+</resources>

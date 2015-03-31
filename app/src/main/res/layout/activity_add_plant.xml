@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:background="@android:color/white"
+                tools:context="aurora.seedit.ui.AddPlantActivity">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:padding="15dp"
+
+        android:layout_height="175dp"
+        android:layout_marginTop="114dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout"
+        android:weightSum="1">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/seedit_plant_button"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/circle"
+            android:background="@android:color/white"
+            android:layout_weight=".33"
+            android:layout_margin="5dp"/>
+
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/custom_plant_button"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/circle"
+            android:background="@android:color/white"
+            android:layout_weight=".33"
+            android:layout_margin="5dp"/>
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/recent_plant_button"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/circle"
+            android:background="@android:color/white"
+            android:layout_weight=".33"
+            android:layout_margin="5dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seedit Plants"
+        android:id="@+id/seedit_plant_text"
+        android:layout_below="@+id/linearLayout"
+        android:layout_toLeftOf="@+id/custom_plant_text"
+        android:layout_toStartOf="@+id/custom_plant_text"
+        android:layout_marginRight="25dp"
+        android:layout_marginEnd="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Custom Plants"
+        android:id="@+id/custom_plant_text"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recent Plants"
+        android:id="@+id/recent_plant_text"
+        android:layout_below="@+id/linearLayout"
+        android:layout_toRightOf="@+id/custom_plant_text"
+        android:layout_toEndOf="@+id/custom_plant_text"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="30dp"/>
+</RelativeLayout>
