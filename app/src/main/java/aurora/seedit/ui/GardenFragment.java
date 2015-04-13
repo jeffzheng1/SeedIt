@@ -61,16 +61,15 @@ public class GardenFragment extends Fragment {
     public GardenFragment() {
     }
 
-
     @Override
     public void onResume() {
         super.onResume();
         mEmptyGardenMessage.setVisibility(View.INVISIBLE);
 
-        Log.d(TAG, "reached debug mark 1");
+//        Log.d(TAG, "reached debug mark 1");
         mCurrentUser = ParseUser.getCurrentUser();
         if (mCurrentUser != null) {
-            Log.d(TAG, "reached debug mark 2");
+//            Log.d(TAG, "reached debug mark 2");
             mCurrentUser.getRelation(ParseConstants.KEY_PLANTS_RELATION);
             mCurrentUser.saveInBackground();
             mPlantsRelation = mCurrentUser.getRelation(ParseConstants.KEY_PLANTS_RELATION);
@@ -80,7 +79,6 @@ public class GardenFragment extends Fragment {
                 @Override
                 public void done(List<ParseObject> plants, ParseException e) {
 //                getActivity().setProgressBarIndeterminateVisibility(false);
-
                     if (e == null) {
                         // We found messages!
                         mPlants = plants;

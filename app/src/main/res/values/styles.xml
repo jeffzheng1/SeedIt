@@ -39,8 +39,6 @@
         <item name="actionModeBackground">@drawable/cab_background_top_actionbarseedit</item>
         <item name="actionModeSplitBackground">@drawable/cab_background_bottom_actionbarseedit</item>
         <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Actionbarseedit</item>
-
-
     </style>
 
     <style name="ActionBar.Solid.Actionbarseedit" parent="@style/Widget.AppCompat.Light.ActionBar.Solid">

@@ -20,6 +20,7 @@ import com.parse.ParseUser;
 import aurora.seedit.R;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import butterknife.internal.ButterKnifeProcessor;
 
 public class LoginDetailActivity extends ActionBarActivity {
 
@@ -44,8 +45,6 @@ public class LoginDetailActivity extends ActionBarActivity {
 
                 username = username.trim();
                 password = password.trim();
-
-
 
                 if (username.isEmpty() || password.isEmpty()) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(LoginDetailActivity.this);
