@@ -53,8 +53,8 @@ public class MainActivity extends NavigationLiveo
 
         List<String> mListNameItem = new ArrayList<>();
         mListNameItem.add(0, getString(R.string.title_dashboard));
-        mListNameItem.add(1, getString(R.string.title_tasks));
-        mListNameItem.add(2, getString(R.string.title_my_garden));
+        mListNameItem.add(1, getString(R.string.title_my_garden));
+        mListNameItem.add(2, getString(R.string.title_tasks));
         mListNameItem.add(3, getString(R.string.title_seedit_store));
         mListNameItem.add(4, getString(R.string.title_seedit_online));
         mListNameItem.add(5, getString(R.string.title_friends));
@@ -69,8 +69,8 @@ public class MainActivity extends NavigationLiveo
         // icons list items
         List<Integer> mListIconItem = new ArrayList<>();
         mListIconItem.add(0, R.drawable.profile_icon);
-        mListIconItem.add(1, R.drawable.task_icon);
-        mListIconItem.add(2, R.drawable.plants_icon);
+        mListIconItem.add(1, R.drawable.plants_icon);
+        mListIconItem.add(2, R.drawable.task_icon);
         mListIconItem.add(3, R.drawable.store_icon);
         mListIconItem.add(4, R.drawable.online_icon);
         mListIconItem.add(5, R.drawable.friends_icon);
@@ -161,7 +161,6 @@ public class MainActivity extends NavigationLiveo
         actionBar.setTitle(mTitle);
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         if (!mIsDrawerCreated) {
@@ -178,7 +177,7 @@ public class MainActivity extends NavigationLiveo
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up water_button, so long
+        // automatically handle clicks on the Home/Up health_icon, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
@@ -200,7 +199,7 @@ public class MainActivity extends NavigationLiveo
     public void onItemClickNavigation(int position, int i2) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         switch (position) {
-            case 2:
+            case 1:
                 fragmentManager.beginTransaction()
                         .replace(R.id.container, GardenFragment.newInstance(position + 1))
                         .addToBackStack(null)

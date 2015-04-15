@@ -80,7 +80,6 @@ public class GardenFragment extends Fragment {
                 public void done(List<ParseObject> plants, ParseException e) {
 //                getActivity().setProgressBarIndeterminateVisibility(false);
                     if (e == null) {
-                        // We found messages!
                         mPlants = plants;
                         if (mPlants.size() == 0) {
                             mEmptyGardenMessage.setVisibility(View.VISIBLE);
@@ -112,7 +111,7 @@ public class GardenFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_garden, container, false);
         ButterKnife.inject(this, rootView);
 
-        applyFont();
+//        applyFont();
 
 //        mAddPlantButton.setOnClickListener(new View.OnClickListener() {
 //            @Override

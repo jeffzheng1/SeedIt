@@ -2,22 +2,21 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:background="@android:color/transparent"
               android:orientation="vertical">
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <RelativeLayout
             android:id="@+id/back_view"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <Button
-                android:layout_marginRight="10dp"
                 android:layout_width="75dp"
-                android:layout_height="75dp"
+                android:layout_height="match_parent"
                 android:text="Delete"
                 android:id="@+id/delete_button"
                 android:background="@drawable/rounded_button_red"
@@ -27,24 +26,19 @@
                 android:layout_alignParentEnd="true"/>
 
             <Button
-                android:layout_marginRight="10dp"
                 android:layout_width="75dp"
-                android:layout_height="75dp"
+                android:layout_height="match_parent"
                 android:text="Info   Page"
                 android:id="@+id/seedit_info_button"
                 android:background="@drawable/rounded_button_purple"
                 android:textColor="@android:color/white"
-                android:layout_centerVertical="true"
-                android:layout_toLeftOf="@id/delete_button"
-
-                />
-
+                android:layout_centerVertical="true"/>
 
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/front_view"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="108dp"
             android:background="@android:color/white">
@@ -58,27 +52,36 @@
                 <!--android:layout_alignParentLeft="true"-->
                 <!--android:layout_alignParentStart="true"/>-->
 
-            <TextView
+            <ImageView
+                android:id="@+id/plant_icon"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_marginLeft="10dp"
                 android:paddingTop="18dp"
                 android:paddingLeft="28dp"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:text="T"
-                android:textSize="30sp"
-                android:id="@+id/plant_icon"
-                android:background="@drawable/circle"
-                android:layout_alignTop="@+id/water_button"
-                android:textColor="@android:color/white"/>
+                android:layout_alignTop="@+id/health_icon"/>
+
+            <!--<TextView-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:paddingTop="18dp"-->
+                <!--android:paddingLeft="28dp"-->
+                <!--android:layout_width="75dp"-->
+                <!--android:layout_height="75dp"-->
+                <!--android:text="T"-->
+                <!--android:textSize="30sp"-->
+                <!--android:id="@+id/plant_icon"-->
+                <!--android:background="@drawable/circle"-->
+                <!--android:layout_alignTop="@+id/health_icon-->
+                <!--android:textColor="@android:color/white"/>-->
 
             <Button
                 android:layout_marginRight="10dp"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-                android:text="Water"
-                android:id="@+id/water_button"
+                android:text="Healthy"
+                android:id="@+id/health_icon"
                 android:background="@drawable/rounded_button"
-                android:textColor="@android:color/white"
+                android:textColor="@color/seedit_green"
                 android:layout_centerVertical="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"/>
@@ -119,9 +122,7 @@
                 android:id="@+id/days_till_harvest_number"
                 android:layout_marginLeft="20dp"
                 android:layout_below="@+id/progressBar"
-                android:layout_toRightOf="@+id/plant_icon"
-
-                />
+                android:layout_toRightOf="@+id/plant_icon"/>
 
         </RelativeLayout>
 

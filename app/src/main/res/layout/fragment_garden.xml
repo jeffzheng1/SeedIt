@@ -15,11 +15,8 @@
         android:listSelector="#00000000"
         swipe:swipeFrontView="@+id/front_view"
         swipe:swipeBackView="@+id/back_view"
-        swipe:swipeMode="left"
-        swipe:swipeOffsetLeft="175dp"
-        swipe:swipeOffsetRight="200dp"
-        android:divider="@null"
-        android:dividerHeight="0dp">
+        swipe:swipeOffsetLeft="285dp"
+        swipe:swipeOffsetRight="285dp">
     </com.fortysevendeg.swipelistview.SwipeListView>
 
     <!--<Button-->

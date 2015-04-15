@@ -47,13 +47,13 @@ public class LoginActivity extends Activity {
 
     private void applyFont() {
         Typeface typeTitle = Typeface.createFromAsset(getAssets(), "fonts/Lato-Hairline.ttf");
-        Typeface typeSecondary = Typeface.createFromAsset(getAssets(), "fonts/Lato-Light.ttf");
+//        Typeface typeSecondary = Typeface.createFromAsset(getAssets(), "fonts/Lato-Light.ttf");
         mLoginTitle.setTypeface(typeTitle);
-        mLoginMessage.setTypeface(typeSecondary);
-        mFacebookLoginButton.setTypeface(typeSecondary);
-        mGoogleLoginButton.setTypeface(typeSecondary);
-        mEmailLoginButton.setTypeface(typeSecondary);
-        mSignupButton.setTypeface(typeSecondary);
+//        mLoginMessage.setTypeface(typeSecondary);
+//        mFacebookLoginButton.setTypeface(typeSecondary);
+//        mGoogleLoginButton.setTypeface(typeSecondary);
+//        mEmailLoginButton.setTypeface(typeSecondary);
+//        mSignupButton.setTypeface(typeSecondary);
     }
 
 }

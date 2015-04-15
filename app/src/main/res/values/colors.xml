@@ -17,4 +17,20 @@
 
     <color name="seedit_purple">#673AB7</color>
 
+    <color name="polymer_purple">#b388ff</color>
+    <color name="polymer_purple_dark">#7e57c2</color>
+    <color name="polymer_red">#ff8a80</color>
+    <color name="polymer_red_dark">#ff5252</color>
+    <color name="polymer_blue">#84ffff</color>
+    <color name="polymer_blue_dark">#03A9F4</color>
+    <color name="polymer_yellow">#ffff8d</color>
+    <color name="polymer_yellow_dark">#ffeb3b</color>
+    <color name="polymer_green">#b9f6ca</color>
+    <color name="polymer_green_dark">#1de9b6</color>
+    <color name="polymer_gray">#eee</color>
+    <color name="polymer_gray_dark">#999</color>
+
+    <color name="material_teal">#26A69A</color>
+    <color name="material_orange">#FFA726</color>
+
 </resources>

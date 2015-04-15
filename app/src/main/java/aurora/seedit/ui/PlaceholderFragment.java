@@ -45,7 +45,6 @@ public class PlaceholderFragment extends Fragment {
     public PlaceholderFragment() {
     }
 
-
     @Override
     public void onResume() {
         super.onResume();

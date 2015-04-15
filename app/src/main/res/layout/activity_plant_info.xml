@@ -1,0 +1,256 @@
+<com.nirhart.parallaxscroll.views.ParallaxScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:parallax_factor="1.0"
+    tools:context="aurora.seedit.ui.PlantInfoActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_weight=".5"
+            android:layout_gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/plant_info_prof_pic"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:color/background_light"
+            android:id="@+id/plant_info_layout_l1">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:padding="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:id="@+id/imageView5"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/lab"/>
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignBottom="@+id/imageView5"
+                    android:text="Nutritional Facts"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@color/polymer_purple_dark"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:padding="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:id="@+id/imageView6"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/params"/>
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignBottom="@+id/imageView6"
+                    android:text="Growing Difficulty"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@color/polymer_blue_dark"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:color/background_light"
+            android:id="@+id/plant_info_layout_l2">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:padding="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:id="@+id/imageView7"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/note"/>
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignBottom="@+id/imageView7"
+                    android:text="Growing Instructions"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@color/polymer_red_dark"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:padding="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:id="@+id/imageView8"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/calendar"/>
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignBottom="@+id/imageView8"
+                    android:text="Seasonality"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@color/material_teal"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:color/background_light"
+            android:id="@+id/plant_info_layout_l3">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:padding="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:id="@+id/imageView11"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/bubble"/>
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignBottom="@+id/imageView11"
+                    android:text="Plant Trivia"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@color/material_orange"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:padding="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:id="@+id/imageView12"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/cloud"/>
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignBottom="@+id/imageView12"
+                    android:text="Growing Climate"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@color/polymer_green_dark"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.nirhart.parallaxscroll.views.ParallaxScrollView>

@@ -34,8 +34,7 @@ public class LoginDetailActivity extends ActionBarActivity {
         setContentView(R.layout.activity_login_detail);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ButterKnife.inject(this);
-
-        applyFont();
+//        applyFont();
 
         mLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,10 +102,10 @@ public class LoginDetailActivity extends ActionBarActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up water_button, so long
+        // automatically handle clicks on the Home/Up health_icon, so long
         // as you specify a parent activity in AndroidManifest.xml.
         switch (item.getItemId()) {
-            // Respond to the action bar's Up/Home water_button
+            // Respond to the action bar's Up/Home health_icon
             case android.R.id.home:
                 NavUtils.navigateUpFromSameTask(this);
                 return true;

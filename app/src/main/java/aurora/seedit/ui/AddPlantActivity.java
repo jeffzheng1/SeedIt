@@ -37,7 +37,7 @@ public class AddPlantActivity extends ActionBarActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ButterKnife.inject(this);
 
-        applyFont();
+//        applyFont();
         mCustomPlantButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,7 +68,7 @@ public class AddPlantActivity extends ActionBarActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up water_button, so long
+        // automatically handle clicks on the Home/Up health_icon, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
