@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:parallax_factor="1.0"
+    app:parallax_factor="1.9"
     tools:context="aurora.seedit.ui.PlantInfoActivity" >
 
     <LinearLayout
@@ -53,7 +53,7 @@
                     android:layout_marginRight="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    android:id="@+id/imageView5"
+                    android:id="@+id/nutrition_button"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
@@ -62,7 +62,7 @@
                 <TextView
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
-                    android:layout_alignBottom="@+id/imageView5"
+                    android:layout_alignBottom="@+id/nutrition_button"
                     android:text="Nutritional Facts"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
@@ -84,7 +84,7 @@
                     android:layout_marginRight="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    android:id="@+id/imageView6"
+                    android:id="@+id/difficulty_button"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
@@ -93,7 +93,7 @@
                 <TextView
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="10dp"
-                    android:layout_alignBottom="@+id/imageView6"
+                    android:layout_alignBottom="@+id/difficulty_button"
                     android:text="Growing Difficulty"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
@@ -125,7 +125,7 @@
                     android:layout_marginRight="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    android:id="@+id/imageView7"
+                    android:id="@+id/instructions_button"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
@@ -134,7 +134,7 @@
                 <TextView
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
-                    android:layout_alignBottom="@+id/imageView7"
+                    android:layout_alignBottom="@+id/instructions_button"
                     android:text="Growing Instructions"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
@@ -156,7 +156,7 @@
                     android:layout_marginRight="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    android:id="@+id/imageView8"
+                    android:id="@+id/seasonality_button"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
@@ -165,7 +165,7 @@
                 <TextView
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="10dp"
-                    android:layout_alignBottom="@+id/imageView8"
+                    android:layout_alignBottom="@+id/seasonality_button"
                     android:text="Seasonality"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
@@ -198,20 +198,20 @@
                     android:layout_marginBottom="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    android:id="@+id/imageView11"
+                    android:id="@+id/store_button"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
-                    android:src="@drawable/bubble"/>
+                    android:src="@drawable/shop"/>
 
                 <TextView
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
-                    android:layout_alignBottom="@+id/imageView11"
-                    android:text="Plant Trivia"
+                    android:layout_alignBottom="@+id/store_button"
+                    android:text="Store"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    android:background="@color/material_orange"
+                    android:background="@color/seedit_green"
                     android:textColor="@android:color/white"
                     android:gravity="center"/>
 
@@ -230,7 +230,7 @@
                     android:layout_marginBottom="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    android:id="@+id/imageView12"
+                    android:id="@+id/climate_button"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
@@ -239,7 +239,7 @@
                 <TextView
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="10dp"
-                    android:layout_alignBottom="@+id/imageView12"
+                    android:layout_alignBottom="@+id/climate_button"
                     android:text="Growing Climate"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"

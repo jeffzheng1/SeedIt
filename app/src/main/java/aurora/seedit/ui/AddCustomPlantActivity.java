@@ -2,6 +2,8 @@ package aurora.seedit.ui;
 
 import android.app.AlertDialog;
 import android.graphics.Typeface;
+import android.support.v4.app.DialogFragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,24 +31,26 @@ import aurora.seedit.utils.ParseConstants;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-public class AddCustomPlantActivity extends ActionBarActivity {
+public class AddCustomPlantActivity extends ActionBarActivity
+        implements DatePickerFragment.DatepickerDialogListener{
 
     protected ParseRelation mPlantsRelation;
     protected ParseUser mCurrentUser;
+    protected java.util.Date mPlantDate;
 
     public static final String TAG = AddCustomPlantActivity.class.getSimpleName();
 
-
-    @InjectView(R.id.plant_info_text) TextView mPlantInfoText;
-    @InjectView(R.id.plant_time_text) TextView mPlantTimeText;
-    @InjectView(R.id.plant_location_text) TextView mPlantLocationText;
+//    @InjectView(R.id.plant_info_text) TextView mPlantInfoText;
+//    @InjectView(R.id.plant_time_text) TextView mPlantTimeText;
+//    @InjectView(R.id.plant_location_text) TextView mPlantLocationText;
+    @InjectView(R.id.plant_date_layout) RelativeLayout mPlantDateLayout;
+    @InjectView(R.id.plant_location_layout) RelativeLayout mPlantLocationLayout;
     @InjectView(R.id.plant_name_field) EditText mPlantNameField;
-    @InjectView(R.id.plant_date_field) EditText mPlantDateField;
-    @InjectView(R.id.plant_location_field) EditText mPlantLocationField;
-    @InjectView(R.id.plant_outdoor_info) TextView mPlantOutdoorInfo;
+    @InjectView(R.id.plant_date_field) TextView mPlantDateField;
+//    @InjectView(R.id.plant_location_field) EditText mPlantLocationField;
+//    @InjectView(R.id.plant_outdoor_info) TextView mPlantOutdoorInfo;
     @InjectView(R.id.add_plant_button) Button mAddPlantButton;
-    @InjectView(R.id.outdoor_radio_group) RadioGroup mOutdoorRadioGroup;
-
+//    @InjectView(R.id.outdoor_radio_group) RadioGroup mOutdoorRadioGroup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +61,23 @@ public class AddCustomPlantActivity extends ActionBarActivity {
         ButterKnife.inject(this);
 //        applyFont();
 
+        mPlantLocationLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        mPlantDateLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle args = new Bundle();
+                DialogFragment datePickerFragment = new DatePickerFragment();
+                datePickerFragment.setArguments(args);
+                datePickerFragment.show(getSupportFragmentManager(), "datepicker");
+            }
+        });
+
         mAddPlantButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,29 +86,28 @@ public class AddCustomPlantActivity extends ActionBarActivity {
                 finish();
             }
         });
-
     }
 
-    private void applyFont() {
-        Typeface type = Typeface.createFromAsset(getAssets(), "fonts/Lato-Light.ttf");
-        mPlantOutdoorInfo.setTypeface(type);
-        mPlantInfoText.setTypeface(type);
-        mPlantTimeText.setTypeface(type);
-        mPlantLocationText.setTypeface(type);
-        mPlantNameField.setTypeface(type);
-        mPlantDateField.setTypeface(type);
-        mPlantLocationField.setTypeface(type);
-        mAddPlantButton.setTypeface(type);
-    }
+//    private void applyFont() {
+//        Typeface type = Typeface.createFromAsset(getAssets(), "fonts/Lato-Light.ttf");
+//        mPlantOutdoorInfo.setTypeface(type);
+//        mPlantInfoText.setTypeface(type);
+//        mPlantTimeText.setTypeface(type);
+//        mPlantLocationText.setTypeface(type);
+//        mPlantNameField.setTypeface(type);
+//        mPlantDateField.setTypeface(type);
+//        mPlantLocationField.setTypeface(type);
+//        mAddPlantButton.setTypeface(type);
+//    }
 
     protected ParseObject createPlantProfile() {
         mCurrentUser = ParseUser.getCurrentUser();
         mPlantsRelation = mCurrentUser.getRelation(ParseConstants.KEY_PLANTS_RELATION);
         ParseObject plantProfile = new ParseObject(ParseConstants.CLASS_PLANTS);
         plantProfile.put(ParseConstants.KEY_PLANT_NAME, mPlantNameField.getText().toString());
-        plantProfile.put(ParseConstants.KEY_PLANTED_AT, mPlantDateField.getText().toString());
-        plantProfile.put(ParseConstants.KEY_PLANT_LOCATION, mPlantLocationField.getText().toString());
-        plantProfile.put(ParseConstants.KEY_PLANT_OUTDOORS, mOutdoorRadioGroup.getCheckedRadioButtonId());
+        plantProfile.put(ParseConstants.KEY_PLANTED_AT, mPlantDate.getTime());
+//        plantProfile.put(ParseConstants.KEY_PLANT_LOCATION, mPlantLocationField.getText().toString());
+//        plantProfile.put(ParseConstants.KEY_PLANT_OUTDOORS, mOutdoorRadioGroup.getCheckedRadioButtonId());
         plantProfile.saveInBackground();
         return plantProfile;
     }
@@ -94,7 +115,6 @@ public class AddCustomPlantActivity extends ActionBarActivity {
     protected void save(ParseObject plantProfile) {
         mPlantsRelation.add(plantProfile);
 //        mCurrentUser.saveInBackground();
-
     }
 
     @Override
@@ -117,5 +137,23 @@ public class AddCustomPlantActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onDialogPositiveClick(DialogFragment dialog, java.util.Date date) {
+        mPlantDate = date;
+        mPlantDateField.setText(dateParser(date.toString()));
+//        Log.v(TAG, date.toString());
+    }
+
+    @Override
+    public void onDialogNegativeClick(DialogFragment dialog) {
+
+    }
+
+    public String dateParser(String date) {
+        String delims = "[ ]+";
+        String[] tokens = date.split(delims);
+        return tokens[0] + " " + tokens[1] + " " + tokens[2];
     }
 }

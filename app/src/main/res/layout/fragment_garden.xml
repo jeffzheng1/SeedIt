@@ -39,7 +39,7 @@
         android:text="@string/empty_garden_message"
         android:id="@+id/empty_garden_message"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"/>
-
+        android:layout_centerHorizontal="true"
+        android:textColor="#9E9E9E"/>
 
 </RelativeLayout>

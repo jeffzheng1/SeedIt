@@ -1,18 +1,17 @@
 package aurora.seedit.ui;
 
 import android.content.Intent;
-import android.media.Image;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.util.SparseIntArray;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.support.v4.widget.DrawerLayout;
 import android.view.View;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationServices;
 import com.parse.ParseUser;
 
 import java.util.ArrayList;
@@ -39,8 +38,10 @@ public class MainActivity extends NavigationLiveo
 
     @Override
     public void onUserInformation() {
-        this.mUserName.setText("Jeff Zheng");
-        this.mUserEmail.setText("FarmerOne");
+        ParseUser currentUser = ParseUser.getCurrentUser();
+        String username = currentUser.getUsername();
+        this.mUserName.setText(username);
+//        this.mUserEmail.setText("FarmerOne");
 //        this.mUserPhoto.setImageResource(R.color.google_red);
         this.mUserBackground.setImageResource(R.drawable.default_background);
     }
@@ -48,6 +49,11 @@ public class MainActivity extends NavigationLiveo
     @Override
     public void onInt(Bundle bundle) {
         this.setNavigationListener(this);
+
+        ParseUser currentUser = ParseUser.getCurrentUser();
+        if (currentUser == null) {
+            navigateToLogin();
+        }
 
         mIsDrawerCreated = false;
 
@@ -137,7 +143,7 @@ public class MainActivity extends NavigationLiveo
 //                break;
 //            default:
 //                fragmentManager.beginTransaction()
-//                        .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
+//                        .replace(R.id.container, MySeeditFragment.newInstance(position + 1))
 //                        .commit();
 //                break;
 //        }
@@ -150,6 +156,9 @@ public class MainActivity extends NavigationLiveo
                 break;
             case 2:
                 mTitle = getString(R.string.title_my_garden);
+                break;
+            case 3:
+                mTitle = getString(R.string.title_tasks);
                 break;
         }
     }
@@ -199,9 +208,21 @@ public class MainActivity extends NavigationLiveo
     public void onItemClickNavigation(int position, int i2) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         switch (position) {
+            case 0:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, MySeeditFragment.newInstance(position + 1))
+                        .addToBackStack(null)
+                        .commit();
+                break;
             case 1:
                 fragmentManager.beginTransaction()
                         .replace(R.id.container, GardenFragment.newInstance(position + 1))
+                        .addToBackStack(null)
+                        .commit();
+                break;
+            case 2:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, TaskFragment.newInstance(position + 1))
                         .addToBackStack(null)
                         .commit();
                 break;

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -25,10 +26,6 @@ public class AddPlantActivity extends ActionBarActivity {
     @InjectView(R.id.seedit_plant_button) ImageButton mSeeditPlantButton;
     @InjectView(R.id.custom_plant_button) ImageButton mCustomPlantButton;
     @InjectView(R.id.recent_plant_button) ImageButton mRecentPlantButton;
-    @InjectView(R.id.seedit_plant_text) TextView mSeeditPlantText;
-    @InjectView(R.id.custom_plant_text) TextView mCustomPlantText;
-    @InjectView(R.id.recent_plant_text) TextView mRecentPlantText;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,18 +42,14 @@ public class AddPlantActivity extends ActionBarActivity {
                 startActivity(intent);
             }
         });
-//        mCurrentUser = ParseUser.getCurrentUser();
-//        mCurrentUser.getRelation(ParseConstants.KEY_PLANTS_RELATION);
-//        mCurrentUser.saveInBackground();
     }
 
-    private void applyFont() {
-        Typeface type = Typeface.createFromAsset(getAssets(), "fonts/Lato-Light.ttf");
-        mSeeditPlantText.setTypeface(type);
-        mCustomPlantText.setTypeface(type);
-        mRecentPlantText.setTypeface(type);
-    }
-
+//    private void applyFont() {
+//        Typeface type = Typeface.createFromAsset(getAssets(), "fonts/Lato-Light.ttf");
+//        mSeeditPlantText.setTypeface(type);
+//        mCustomPlantText.setTypeface(type);
+//        mRecentPlantText.setTypeface(type);
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

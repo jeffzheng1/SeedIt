@@ -3,21 +3,32 @@ package aurora.seedit.adapters;
 import java.util.Date;
 import java.util.List;
 
+import android.app.Activity;
+import android.app.Dialog;
+import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 import android.content.Context;
 import android.content.Intent;
+import android.support.v4.app.FragmentActivity;
 import android.text.format.DateUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.parse.ParseObject;
 
+import aurora.seedit.ui.PlantStatsFragment;
 import aurora.seedit.ui.PlantInfoActivity;
+import aurora.seedit.ui.PlantStatsFragment;
 import aurora.seedit.utils.CircularImageView;
 import aurora.seedit.utils.ParseConstants;
 import aurora.seedit.utils.SeeditPlantFunctions;
@@ -45,11 +56,13 @@ public class GardenListAdapter extends ArrayAdapter<ParseObject> {
             holder.nameLabel = (TextView) convertView.findViewById(R.id.plant_name_garden_item);
             holder.timeLabel = (TextView) convertView.findViewById(R.id.days_till_harvest_number);
             holder.plantInfoButton = (Button) convertView.findViewById(R.id.seedit_info_button);
+            holder.healthIcon = (Button) convertView.findViewById(R.id.health_icon);
             convertView.setTag(holder);
         }
         else {
             holder = (ViewHolder)convertView.getTag();
         }
+
 
         ParseObject plant = mPlants.get(position);
 
@@ -66,7 +79,22 @@ public class GardenListAdapter extends ArrayAdapter<ParseObject> {
 //            holder.iconImageView.setImageResource(R.drawable.ic_video);
 //        }
         final String plantName = plant.getString(ParseConstants.KEY_PLANT_NAME);
+
+        holder.healthIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle args = new Bundle();
+                args.putString("plant_name", plantName);
+                DialogFragment plantStatsFragment = new PlantStatsFragment();
+                plantStatsFragment.setArguments(args);
+                plantStatsFragment.show(((FragmentActivity) mContext).getSupportFragmentManager(), "stats");
+            }
+        });
+
+        //Set title (the plant name) for each list item
         holder.nameLabel.setText(plantName);
+
+        //Set picture for plant info activity
         holder.iconImageView.setBackgroundResource(SeeditPlantFunctions.plantToImage(plantName));
         holder.plantInfoButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,11 +108,15 @@ public class GardenListAdapter extends ArrayAdapter<ParseObject> {
         return convertView;
     }
 
+
+
     private static class ViewHolder {
         ImageView iconImageView;
         TextView nameLabel;
         TextView timeLabel;
         Button plantInfoButton;
+        RelativeLayout frontView;
+        Button healthIcon;
 
         ImageView plantImage;
         TextView harvestCounter;

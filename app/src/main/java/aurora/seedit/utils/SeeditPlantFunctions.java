@@ -71,4 +71,73 @@ public class SeeditPlantFunctions {
                 return 0;
         }
     }
+
+    static public String plantToURL(String plant) {
+        String plantURL;
+        switch (plant) {
+            case "Basil":
+                plantURL = "herbs/basil/";
+                break;
+            case "Blueberries":
+                plantURL = "fruit-plants/blueberry-plants/";
+                break;
+            case "Cantaloupes":
+                plantURL = "fruit-plants/melon/cantaloupe/";
+                break;
+            case "Cherry Tomatoes":
+                plantURL = "vegetables/tomatoes/cherry/";
+                break;
+            case "Cilantro":
+                plantURL = "herbs/cilantro/";
+                break;
+            case "Corn":
+                plantURL = "vegetables/corn/";
+                break;
+            case "Cucumbers":
+                plantURL = "vegetables/cucumbers/";
+                break;
+            case "Eggplants":
+                plantURL = "vegetables/eggplants/";
+                break;
+            case "Kale":
+                plantURL = "vegetables/kale";
+                break;
+            case "Leaf Lettuce":
+                plantURL = "vegetables/lettuce/looseleaf/";
+                break;
+            case "Lemon":
+                plantURL = "";
+                break;
+            case "Peppers":
+                plantURL = "vegetables/peppers/all-peppers/";
+                break;
+            case "Radish":
+                plantURL = "vegetables/radish/";
+                break;
+            case "Sage":
+                plantURL = "herbs/sage/";
+                break;
+            case "Slicing Tomatoes":
+                plantURL = "tomatoes/beefsteak/";
+                break;
+            case "Snow Peas":
+                plantURL = "vegetables/peas/snow-sugar/";
+                break;
+            case "Strawberries":
+                plantURL = "fruit-plants/strawberry-plants/";
+                break;
+            case "Swiss Chard":
+                plantURL = "vegetables/swiss-chard/";
+                break;
+            case "Watermelon":
+                plantURL = "fruit-plants/melon/watermelon/";
+                break;
+            case "Zucchini":
+                plantURL = "vegetables/squash/summer/zucchini/";
+                break;
+            default:
+                plantURL = "";
+        }
+        return "http://www.burpee.com/" + plantURL;
+    }
 }

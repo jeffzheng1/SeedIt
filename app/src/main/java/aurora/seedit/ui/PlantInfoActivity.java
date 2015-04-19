@@ -1,9 +1,12 @@
 package aurora.seedit.ui;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,6 +20,9 @@ public class PlantInfoActivity extends ActionBarActivity {
 
 //    @InjectView(R.id.plant_info_name) TextView mPlantInfoName;
     @InjectView(R.id.plant_info_prof_pic) ImageView mPlantInfoProfPic;
+    @InjectView(R.id.store_button) ImageView mStoreButton;
+
+    private String mPlantName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +32,22 @@ public class PlantInfoActivity extends ActionBarActivity {
         ButterKnife.inject(this);
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
-            String plantName = extras.getString("plant_name");
+            mPlantName = extras.getString("plant_name");
 //            mPlantInfoName.setText(plantName);
-            mPlantInfoProfPic.setBackgroundResource(SeeditPlantFunctions.plantToImage(plantName));
+            mPlantInfoProfPic.setBackgroundResource(SeeditPlantFunctions.plantToImage(mPlantName));
         }
+
+        mStoreButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Intent intent = new Intent(PlantInfoActivity.this, StoreActivity.class);
+//                intent.putExtra("plant_name", mPlantName);
+//                startActivity(intent);
+                Uri uri = Uri.parse(SeeditPlantFunctions.plantToURL(mPlantName));
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

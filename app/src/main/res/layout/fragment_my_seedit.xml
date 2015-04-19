@@ -1,0 +1,258 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    tools:context="aurora.seedit.ui.MainActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/nliveo_green_colorPrimary"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageView"
+            android:background="@drawable/circle"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text="J"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            android:paddingLeft="40dp"
+            android:paddingTop="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jeff Zheng"
+            android:id="@+id/textView4"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:layout_above="@+id/textView5"
+            android:layout_alignLeft="@+id/textView5"
+            android:layout_alignStart="@+id/textView5"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Level 15"
+            android:id="@+id/textView5"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            />
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView5"
+            android:layout_alignLeft="@+id/textView5"
+            android:layout_alignStart="@+id/textView5">
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:id="@+id/textView6"
+                android:textColor="@color/medal_gold"
+                android:layout_alignBottom="@+id/imageView2"
+                android:layout_alignLeft="@+id/textView5"
+                android:layout_alignStart="@+id/textView5"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/imageView2"
+                android:src="@drawable/circle_gold"
+                android:layout_below="@+id/imageView"
+                android:layout_toRightOf="@+id/textView6"
+                android:layout_toEndOf="@+id/textView6"/>
+
+            <TextView
+                android:gravity="center"
+                android:textColor="@color/medal_silver"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:id="@+id/textView7"
+                android:layout_alignBottom="@+id/imageView2"
+                android:layout_toRightOf="@+id/imageView2"
+                android:layout_toEndOf="@+id/imageView2"
+                android:layout_marginLeft="10dp"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/imageView3"
+                android:src="@drawable/circle_silver"
+                android:layout_below="@+id/imageView"
+                android:layout_toRightOf="@+id/textView7"
+                android:layout_toEndOf="@+id/textView7"/>
+
+            <TextView
+                android:gravity="center"
+                android:textColor="@color/medal_bronze"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:text="6"
+                android:id="@+id/textView8"
+                android:layout_alignBottom="@+id/imageView3"
+                android:layout_toRightOf="@+id/imageView3"
+                android:layout_toEndOf="@+id/imageView3"
+                android:layout_marginLeft="10dp"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/imageView4"
+                android:src="@drawable/circle_bronze"
+                android:layout_alignBottom="@+id/textView8"
+                android:layout_toRightOf="@+id/textView8"
+                android:layout_toEndOf="@+id/textView8"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/polymer_blue_dark"
+        android:id="@+id/weather_layout">
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/weather_section_title"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:text="Current Weather at Garden"/>
+
+        <TextView
+            android:layout_marginLeft="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--"
+            android:id="@+id/temperatureLabel"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/white"
+            android:textSize="110sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/degree_image"
+            android:src="@drawable/degree"
+            android:layout_alignTop="@+id/temperatureLabel"
+            android:layout_toRightOf="@+id/temperatureLabel"
+            android:layout_toEndOf="@+id/temperatureLabel"
+            android:nestedScrollingEnabled="false"
+            android:layout_marginTop="30dp" />
+
+        <LinearLayout
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="40dp"
+            android:id="@+id/linearLayout">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Humidity"
+                    android:id="@+id/humidityLabel"
+                    android:textColor="#80ffffff"
+                    android:gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="--"
+                    android:id="@+id/humidityValue"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:gravity="center_horizontal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rain/Snow"
+                    android:id="@+id/precipLabel"
+                    android:textColor="#80ffffff"
+                    android:gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="--"
+                    android:id="@+id/precipValue"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:gravity="center_horizontal" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/linearLayout2">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/iconImageView" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="Retriving weather data"
+                android:id="@+id/summaryLabel"
+                android:layout_marginBottom="30dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="20sp"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
+

@@ -39,7 +39,7 @@ public class SignupActivity extends ActionBarActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ButterKnife.inject(this);
 
-        applyFont();
+//        applyFont();
 
         mSignupButton.setOnClickListener(new View.OnClickListener() {
             @Override
