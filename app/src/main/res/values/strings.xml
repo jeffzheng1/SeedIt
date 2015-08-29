@@ -44,17 +44,12 @@
     <string name="title_activity_add_plant">Add Plant</string>
     <string name="title_seedit_store">Seedit Store</string>
     <string name="title_dashboard">My Seedit</string>
-    <string name="title_activity_add_custom_plant">Add Custom Plant</string>
+    <string name="title_activity_add_custom_plant">Add Plant</string>
 
     <string name="error_selecting_file_title">We\'re sorry!</string>
     <string name="success_message">Plant added!</string>
     <string name="error_sending_message">There was an error in adding your plant.
         Please try again.</string>
-
-
-
-
-
 
     <string name="sign_in">Sign in</string>
 
@@ -77,4 +72,61 @@
     <string name="title_seedit_online">SeeditOnline</string>
     <string name="title_friends">Friends</string>
     <string name="title_tasks">Tasks</string>
+    <string name="title_activity_plant_info">Plant Info</string>
+    <string name="title_activity_store">Seedit Store</string>
+
+    <string-array name="states_array">
+        <item>AK</item>
+        <item>AL</item>AL
+        <item>AZ</item>
+        <item>AR</item>
+        <item>CA</item>
+        <item>CO</item>
+        <item>CT</item>
+        <item>DE</item>
+        <item>FL</item>
+        <item>GA</item>
+        <item>HI</item>
+        <item>ID</item>
+        <item>IL</item>
+        <item>IN</item>
+        <item>IA</item>
+        <item>KS</item>
+        <item>KY</item>
+        <item>LA</item>
+        <item>ME</item>
+        <item>MD</item>
+        <item>MA</item>
+        <item>MI</item>
+        <item>MN</item>
+        <item>MS</item>
+        <item>MO</item>
+        <item>MT</item>
+        <item>NE</item>
+        <item>NV</item>
+        <item>NH</item>
+        <item>NJ</item>
+        <item>NM</item>
+        <item>NY</item>
+        <item>NC</item>
+        <item>ND</item>
+        <item>OH</item>
+        <item>OK</item>
+        <item>OR</item>
+        <item>PA</item>
+        <item>RI</item>
+        <item>SC</item>
+        <item>SD</item>
+        <item>TN</item>
+        <item>TX</item>
+        <item>UT</item>
+        <item>VT</item>
+        <item>VA</item>
+        <item>WA</item>
+        <item>WV</item>
+        <item>WI</item>
+        <item>WY</item>
+    </string-array>
+    <string name="title_activity_seedit_plant">Seedit Plants</string>
+    <string name="title_activity_seedit_plants_list_adapter">SeeditPlantsListAdapter</string>
 </resources>

@@ -8,19 +8,19 @@
                 android:paddingBottom="@dimen/activity_vertical_margin"
                 tools:context="aurora.seedit.ui.LoginDetailActivity">
     <EditText
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="125dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="text"
         android:id="@+id/login_username_field"
         android:ems="10"
         android:hint="@string/signup_username_hint"
-        android:layout_below="@+id/divider"
+        android:textColor="@android:color/darker_gray"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:textColor="@android:color/darker_gray"/>
+        android:layout_alignRight="@+id/login_password_field"
+        android:layout_alignEnd="@+id/login_password_field"/>
 
     <EditText
         android:layout_marginTop="10dp"
@@ -46,5 +46,23 @@
         android:layout_marginTop="27dp"
         android:background="@color/seedit_green"
         android:textColor="@android:color/white"/>
+
+    <ImageView
+        android:src="@drawable/plant10"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/seedit_logo"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Forgot your password?"
+        android:id="@+id/textView11"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="65dp"/>
 
 </RelativeLayout>

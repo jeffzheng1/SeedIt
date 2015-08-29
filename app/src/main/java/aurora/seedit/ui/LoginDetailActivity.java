@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.parse.LogInCallback;
 import com.parse.ParseException;
@@ -20,12 +21,14 @@ import com.parse.ParseUser;
 import aurora.seedit.R;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import butterknife.internal.ButterKnifeProcessor;
 
 public class LoginDetailActivity extends ActionBarActivity {
 
     @InjectView(R.id.login_username_field) EditText mLoginUsername;
     @InjectView(R.id.login_password_field) EditText mLoginPasswordField;
     @InjectView(R.id.login_button) Button mLoginButton;
+    @InjectView(R.id.seedit_logo) ImageView mLogo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +36,7 @@ public class LoginDetailActivity extends ActionBarActivity {
         setContentView(R.layout.activity_login_detail);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ButterKnife.inject(this);
-
+        mLogo.setRotation(45);
         applyFont();
 
         mLoginButton.setOnClickListener(new View.OnClickListener() {
@@ -44,8 +47,6 @@ public class LoginDetailActivity extends ActionBarActivity {
 
                 username = username.trim();
                 password = password.trim();
-
-
 
                 if (username.isEmpty() || password.isEmpty()) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(LoginDetailActivity.this);
@@ -86,12 +87,13 @@ public class LoginDetailActivity extends ActionBarActivity {
     }
 
     private void applyFont() {
-        Typeface type = Typeface.createFromAsset(getAssets(), "fonts/Lato-Light.ttf");
+        Typeface type = Typeface.createFromAsset(getAssets(), "fonts/Lato-Regular.ttf");
 //        mFirstNameField.setTypeface(type);
 //        mLastNameField.setTypeface(type);
         mLoginUsername.setTypeface(type);
         mLoginPasswordField.setTypeface(type);
         mLoginButton.setTypeface(type);
+        mLoginButton.setTransformationMethod(null);
     }
 
     @Override
@@ -104,10 +106,10 @@ public class LoginDetailActivity extends ActionBarActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up water_button, so long
+        // automatically handle clicks on the Home/Up health_icon, so long
         // as you specify a parent activity in AndroidManifest.xml.
         switch (item.getItemId()) {
-            // Respond to the action bar's Up/Home water_button
+            // Respond to the action bar's Up/Home health_icon
             case android.R.id.home:
                 NavUtils.navigateUpFromSameTask(this);
                 return true;

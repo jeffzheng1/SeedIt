@@ -96,7 +96,7 @@ public class SignupActivity extends ActionBarActivity {
     }
 
     private void applyFont() {
-        Typeface type = Typeface.createFromAsset(getAssets(), "fonts/Lato-Light.ttf");
+        Typeface type = Typeface.createFromAsset(getAssets(), "fonts/Lato-Regular.ttf");
         mFacebookSignupButton.setTypeface(type);
         mGoogleSignupButton.setTypeface(type);
 //        mFirstNameField.setTypeface(type);
@@ -104,8 +104,10 @@ public class SignupActivity extends ActionBarActivity {
         mSignupEmailField.setTypeface(type);
         mSignupPasswordField.setTypeface(type);
         mSignupButton.setTypeface(type);
+        mFacebookSignupButton.setTransformationMethod(null);
+        mGoogleSignupButton.setTransformationMethod(null);
+        mSignupButton.setTransformationMethod(null);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -117,10 +119,10 @@ public class SignupActivity extends ActionBarActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up water_button, so long
+        // automatically handle clicks on the Home/Up health_icon, so long
         // as you specify a parent activity in AndroidManifest.xml.
         switch (item.getItemId()) {
-            // Respond to the action bar's Up/Home water_button
+            // Respond to the action bar's Up/Home health_icon
             case android.R.id.home:
                 NavUtils.navigateUpFromSameTask(this);
                 return true;

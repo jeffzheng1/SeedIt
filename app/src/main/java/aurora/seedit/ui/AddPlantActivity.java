@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -22,13 +23,9 @@ public class AddPlantActivity extends ActionBarActivity {
 
     protected ParseRelation mPlantsRelation;
     protected ParseUser mCurrentUser;
-    @InjectView(R.id.seedit_plant_button) ImageButton mSeeditPlantButton;
-    @InjectView(R.id.custom_plant_button) ImageButton mCustomPlantButton;
-    @InjectView(R.id.recent_plant_button) ImageButton mRecentPlantButton;
-    @InjectView(R.id.seedit_plant_text) TextView mSeeditPlantText;
-    @InjectView(R.id.custom_plant_text) TextView mCustomPlantText;
-    @InjectView(R.id.recent_plant_text) TextView mRecentPlantText;
-
+    @InjectView(R.id.seedit_plant_button) Button mSeeditPlantButton;
+    @InjectView(R.id.custom_plant_button) Button mCustomPlantButton;
+    @InjectView(R.id.recent_plant_button) Button mRecentPlantButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,21 +39,34 @@ public class AddPlantActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AddPlantActivity.this, AddCustomPlantActivity.class);
+                intent.putExtra("plant_name", "NULL");
                 startActivity(intent);
             }
         });
-//        mCurrentUser = ParseUser.getCurrentUser();
-//        mCurrentUser.getRelation(ParseConstants.KEY_PLANTS_RELATION);
-//        mCurrentUser.saveInBackground();
+
+        mSeeditPlantButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddPlantActivity.this, AddSeeditPlantActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void applyFont() {
-        Typeface type = Typeface.createFromAsset(getAssets(), "fonts/Lato-Light.ttf");
-        mSeeditPlantText.setTypeface(type);
-        mCustomPlantText.setTypeface(type);
-        mRecentPlantText.setTypeface(type);
+        Typeface type = Typeface.createFromAsset(getAssets(), "fonts/Lato-Medium.ttf");
+        mSeeditPlantButton.setTypeface(type);
+        mCustomPlantButton.setTypeface(type);
+        mRecentPlantButton.setTypeface(type);
+
     }
 
+//    @Override
+//    public void onResume() {
+//        super.onResume();
+//        mCurrentUser = ParseUser.getCurrentUser();
+//        mCurrentUser.saveInBackground();
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -68,7 +78,7 @@ public class AddPlantActivity extends ActionBarActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up water_button, so long
+        // automatically handle clicks on the Home/Up health_icon, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 

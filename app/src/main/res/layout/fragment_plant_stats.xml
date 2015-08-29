@@ -1,0 +1,152 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="aurora.seedit.ui.PlantStatsDialogFragment"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                android:padding="10dp"
+                android:background="@drawable/oval_background_green"
+                android:id="@+id/stats_title"
+                android:textSize="30dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="Title"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/soil_moisture_title"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Soil Moisture"
+                    android:layout_centerHorizontal="true"/>
+
+                <aurora.seedit.utils.CircleDisplay
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2.5dp"
+                    android:id="@+id/circleDisplay1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="Temperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/temp_title"/>
+
+                <aurora.seedit.utils.CircleDisplay
+                    android:layout_marginLeft="2.5dp"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/circleDisplay2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/soil_nutri_title"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Soil Nutrition"
+                android:layout_centerHorizontal="true"/>
+
+            <aurora.seedit.utils.CircleDisplay
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="2.5dp"
+                android:id="@+id/circleDisplay3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/sunlight_title"
+                android:gravity="center"
+                android:text="Sunlight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"/>
+
+            <aurora.seedit.utils.CircleDisplay
+                android:layout_marginLeft="2.5dp"
+                android:layout_marginRight="5dp"
+                android:id="@+id/circleDisplay4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_weight=".5"-->
+            <!--android:background="@android:color/white">-->
+
+            <!--<Button-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="More Info"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--android:background="@color/seedit_green"/>-->
+
+        <!--</RelativeLayout>-->
+
+</LinearLayout>

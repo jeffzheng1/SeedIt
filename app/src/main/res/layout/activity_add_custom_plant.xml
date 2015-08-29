@@ -3,31 +3,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/scrollView"
-    android:layout_gravity="right">
+    android:layout_gravity="right"
+    android:background="@color/background_gray" >
 
     <LinearLayout
-                  android:layout_width="match_parent"
-                  android:layout_height="match_parent"
-                  android:background="@color/background_gray"
-                  android:orientation="vertical">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <RelativeLayout
-            android:paddingTop="20dp"
             android:paddingBottom="20dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-
             android:background="@android:color/white">
-
-            <TextView
-                android:layout_centerHorizontal="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Plant Information"
-                android:id="@+id/plant_info_text"/>
 
             <EditText
                 android:hint="Plant Name"
@@ -36,116 +27,95 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/plant_name_field"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"/>
+                android:layout_gravity="center_vertical"/>
 
         </RelativeLayout>
 
         <RelativeLayout
-            android:paddingTop="20dp"
+            android:id="@+id/plant_date_layout"
             android:paddingBottom="20dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-
             android:background="@android:color/white">
 
             <TextView
-                android:layout_centerHorizontal="true"
+                android:text="Planting Date"
+                android:textSize="20sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Time of Plant"
-                android:id="@+id/plant_time_text"/>
-
-            <EditText
-                android:hint="Planting Date"
-                android:textSize="20sp"
-                android:layout_marginTop="30dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="date"
-                android:ems="10"
                 android:id="@+id/plant_date_field"
                 android:layout_gravity="center_vertical"
-                android:layout_weight="1"/>
-
-            <!--<DatePicker-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:id="@+id/datePicker"-->
-                <!--android:layout_alignParentBottom="true"-->
-                <!--android:layout_centerHorizontal="true"/>-->
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"/>
+            
+            <ImageView
+                android:layout_marginTop="30dp"
+                android:background="@drawable/calendar_icon"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/imageView5"/>
+            
+            <ImageView
+                android:background="@drawable/chevron_right"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/chevron_right1"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
 
         </RelativeLayout>
 
         <RelativeLayout
-            android:paddingTop="20dp"
+            android:id="@+id/plant_location_layout"
             android:paddingBottom="20dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-
             android:background="@android:color/white">
 
             <TextView
-                android:layout_centerHorizontal="true"
+                android:text="Plant Location"
+                android:textSize="20sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Location of Plant"
-                android:id="@+id/plant_location_text"/>
-
-            <RadioGroup
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="30dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-
-                android:id="@+id/outdoor_radio_group">
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Is plant outdoors?"
-                    android:id="@+id/plant_outdoor_info"/>
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Yes"
-                    android:id="@+id/outdoor_radio"/>
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="No"
-                    android:id="@+id/indoor_radio"/>
-
-            </RadioGroup>
-
-            <EditText
-                android:hint="Location of Planting"
-                android:textSize="20sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
                 android:id="@+id/plant_location_field"
                 android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:layout_below="@+id/outdoor_radio_group"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"/>
+
+            <ImageView
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/location_icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:inputType="textPostalAddress"/>
+                android:layout_alignParentStart="true"/>
+
+            <ImageView
+                android:background="@drawable/chevron_right"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/chevron_right2"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
 
         </RelativeLayout>
 
         <Button
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:text="@string/add_plant_button_text"
@@ -155,4 +125,5 @@
             android:layout_gravity="center_horizontal"/>
 
     </LinearLayout>
+
 </ScrollView>

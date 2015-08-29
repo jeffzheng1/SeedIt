@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.ListFragment;
+import android.text.Spannable;
+import android.text.SpannableString;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,6 +28,7 @@ import java.util.List;
 import aurora.seedit.R;
 import aurora.seedit.adapters.GardenListAdapter;
 import aurora.seedit.utils.ParseConstants;
+import aurora.seedit.utils.TypefaceSpan;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
@@ -41,7 +45,6 @@ public class GardenFragment extends Fragment {
     protected ParseRelation mPlantsRelation;
     protected ParseUser mCurrentUser;
     @InjectView(R.id.empty_garden_message) TextView mEmptyGardenMessage;
-//    @InjectView(R.id.add_plant_button) Button mAddPlantButton;
     @InjectView(R.id.garden_list) ListView mGardenList;
 
     public String TAG = "GardenFragment.java";
@@ -61,28 +64,23 @@ public class GardenFragment extends Fragment {
     public GardenFragment() {
     }
 
-
     @Override
     public void onResume() {
         super.onResume();
         mEmptyGardenMessage.setVisibility(View.INVISIBLE);
 
-        Log.d(TAG, "reached debug mark 1");
         mCurrentUser = ParseUser.getCurrentUser();
         if (mCurrentUser != null) {
-            Log.d(TAG, "reached debug mark 2");
-            mCurrentUser.getRelation(ParseConstants.KEY_PLANTS_RELATION);
-            mCurrentUser.saveInBackground();
-            mPlantsRelation = mCurrentUser.getRelation(ParseConstants.KEY_PLANTS_RELATION);
-            ParseQuery<ParseObject> query = mPlantsRelation.getQuery();
+//            mPlantsRelation = mCurrentUser.getRelation(ParseConstants.KEY_PLANTS_RELATION);
+//            mCurrentUser.saveInBackground();
+            ParseQuery<ParseObject> query = ParseQuery.getQuery("plants");
+            query.whereEqualTo("planter", mCurrentUser.getUsername());
             query.addDescendingOrder(ParseConstants.KEY_PLANTED_AT);
             query.findInBackground(new FindCallback<ParseObject>() {
                 @Override
                 public void done(List<ParseObject> plants, ParseException e) {
 //                getActivity().setProgressBarIndeterminateVisibility(false);
-
                     if (e == null) {
-                        // We found messages!
                         mPlants = plants;
                         if (mPlants.size() == 0) {
                             mEmptyGardenMessage.setVisibility(View.VISIBLE);
@@ -114,7 +112,8 @@ public class GardenFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_garden, container, false);
         ButterKnife.inject(this, rootView);
 
-        applyFont();
+
+//        applyFont();
 
 //        mAddPlantButton.setOnClickListener(new View.OnClickListener() {
 //            @Override

@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:name=".utils.SeeditApplication"
@@ -16,13 +17,18 @@
             android:name=".ui.MainActivity"
             android:label="@string/title_activity_main_activity"
             android:screenOrientation="portrait"
-            android:theme="@style/nLiveoDrawer">
+            android:theme="@style/nLiveoDrawer" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
         <activity
             android:name=".ui.LoginActivity"
             android:label="@string/title_activity_login"
@@ -37,17 +43,42 @@
         <activity
             android:name=".ui.LoginDetailActivity"
             android:label="@string/title_activity_login_detail"
-            android:parentActivityName=".ui.LoginActivity" >
+            android:parentActivityName=".ui.LoginActivity"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".ui.AddPlantActivity"
             android:label="@string/title_activity_add_plant"
-            android:parentActivityName=".ui.MainActivity" >
+            android:parentActivityName=".ui.MainActivity"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".ui.AddCustomPlantActivity"
             android:label="@string/title_activity_add_custom_plant"
-            android:parentActivityName=".ui.AddPlantActivity">
+            android:parentActivityName=".ui.AddPlantActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.PlantInfoActivity"
+            android:label="@string/title_activity_plant_info"
+            android:parentActivityName=".ui.MainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.StoreActivity"
+            android:label="@string/title_activity_store" >
+        </activity>
+        <activity
+            android:name=".ui.AddSeeditPlantActivity"
+            android:label="@string/title_activity_seedit_plant"
+            android:parentActivityName=".ui.AddPlantActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="aurora.seedit.ui.AddPlantActivity" />
+        </activity>
+        <activity
+            android:name=".adapters.SeeditPlantsListAdapter"
+            android:label="@string/title_activity_seedit_plants_list_adapter" >
         </activity>
     </application>
 

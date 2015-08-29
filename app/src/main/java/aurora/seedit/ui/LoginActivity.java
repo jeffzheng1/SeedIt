@@ -6,6 +6,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import aurora.seedit.R;
@@ -20,6 +21,7 @@ public class LoginActivity extends Activity {
     @InjectView(R.id.google_login_button) Button mGoogleLoginButton;
     @InjectView(R.id.email_login_button) Button mEmailLoginButton;
     @InjectView(R.id.signup_button) TextView mSignupButton;
+    @InjectView(R.id.plant_logo) ImageView mPlantLogo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +30,7 @@ public class LoginActivity extends Activity {
         ButterKnife.inject(this);
 
         applyFont();
-
+        mPlantLogo.setRotation(45);
         mSignupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,14 +48,19 @@ public class LoginActivity extends Activity {
     }
 
     private void applyFont() {
-        Typeface typeTitle = Typeface.createFromAsset(getAssets(), "fonts/Lato-Hairline.ttf");
-        Typeface typeSecondary = Typeface.createFromAsset(getAssets(), "fonts/Lato-Light.ttf");
+        Typeface typeTitle = Typeface.createFromAsset(getAssets(), "fonts/Lato-Medium.ttf");
+        Typeface typeSecondary = Typeface.createFromAsset(getAssets(), "fonts/Lato-Regular.ttf");
         mLoginTitle.setTypeface(typeTitle);
         mLoginMessage.setTypeface(typeSecondary);
         mFacebookLoginButton.setTypeface(typeSecondary);
         mGoogleLoginButton.setTypeface(typeSecondary);
         mEmailLoginButton.setTypeface(typeSecondary);
         mSignupButton.setTypeface(typeSecondary);
+        mFacebookLoginButton.setTransformationMethod(null);
+        mGoogleLoginButton.setTransformationMethod(null);
+        mEmailLoginButton.setTransformationMethod(null);
+        mSignupButton.setTransformationMethod(null);
+
     }
 
 }

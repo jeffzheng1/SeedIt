@@ -34,4 +34,9 @@ dependencies {
     compile ('com.fortysevendeg.swipelistview:swipelistview:1.0-SNAPSHOT@aar') {
         transitive = true
     }
+    compile 'com.github.nirhart:parallaxscroll:1.0'
+    compile 'com.squareup.okhttp:okhttp:2.2.0'
+    compile 'com.google.android.gms:play-services:6.5.87'
+    compile 'de.hdodenhof:circleimageview:1.2.2'
+
 }
