@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="aurora.seedit.ui.fragment_garden">
+
+    <com.fortysevendeg.swipelistview.SwipeListView
+        android:id="@+id/seedit_plants_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:headerDividersEnabled="false"
+        xmlns:swipe="http://schemas.android.com/apk/res-auto"
+        swipe:swipeMode="right"
+        android:listSelector="#00000000"
+        swipe:swipeFrontView="@+id/front_view"
+        swipe:swipeBackView="@+id/back_view"
+        swipe:swipeOffsetLeft="285dp"
+        swipe:swipeOffsetRight="285dp">
+    </com.fortysevendeg.swipelistview.SwipeListView>
+
+    <!--<Button-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/add_plant_button_text"-->
+    <!--android:id="@+id/add_plant_button"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_alignParentStart="true"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:background="@color/nliveo_green_colorPrimary"-->
+    <!--android:textColor="@android:color/white"/>-->
+
+</RelativeLayout>

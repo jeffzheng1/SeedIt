@@ -12,15 +12,35 @@
         android:layout_gravity="center_horizontal"
         android:background="@color/nliveo_green_colorPrimary">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/app_name"
             android:id="@+id/app_name"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
             android:textSize="64sp"
-            android:textColor="@android:color/white"/>
+            android:textColor="@android:color/white"
+            android:layout_marginRight="75dp"
+            android:layout_marginEnd="48dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+        <ImageView
+            android:layout_marginRight="-20dp"
+            android:src="@drawable/plant10"
+            android:layout_width="90dp"
+            android:layout_height="50dp"
+            android:id="@+id/plant_logo"
+            android:layout_toStartOf="@+id/app_name"
+            android:layout_alignBottom="@+id/app_name"
+            android:layout_alignTop="@+id/app_name"
+            android:layout_toLeftOf="@+id/app_name"/>
 
     </RelativeLayout>
 

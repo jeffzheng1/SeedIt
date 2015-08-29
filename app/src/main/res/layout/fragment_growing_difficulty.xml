@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="aurora.seedit.ui.GrowingDifficultyFragment"
+             android:background="@color/polymer_blue_dark">
+
+    <TextView
+        android:textSize="30dp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Growing Difficulty"
+        android:id="@+id/seasonality_title"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:textColor="@color/polymer_blue_dark"
+        android:padding="10dp"
+        android:background="@drawable/oval_background"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Overall Difficulty"
+        android:id="@+id/growing_diff_title"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/seasonality_title"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="15dp"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/overall_diff_amount"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/growing_diff_title"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:textColor="@color/polymer_blue_dark"
+        android:padding="10dp"
+        android:background="@drawable/oval_background"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Watering Frequency"
+        android:id="@+id/watering_freq_title"
+        android:layout_below="@+id/overall_diff_amount"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/watering_freq_amount"
+        android:layout_below="@+id/watering_freq_title"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:textColor="@color/polymer_blue_dark"
+        android:padding="10dp"
+        android:background="@drawable/oval_background"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Days to Maturity"
+        android:id="@+id/maturity_title"
+        android:layout_below="@+id/watering_freq_amount"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/maturity_amount"
+        android:layout_below="@+id/maturity_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"/>
+
+</RelativeLayout>

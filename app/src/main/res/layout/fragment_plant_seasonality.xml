@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="aurora.seedit.ui.PlantSeasonalityFragment"
+             android:background="@color/material_teal">
+
+    <TextView
+        android:textSize="30dp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Site and Seasonality"
+        android:id="@+id/seasonality_title"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:background="@drawable/oval_background"
+        android:textColor="@color/material_teal"
+        android:textSize="18dp"
+        android:layout_height="wrap_content"
+        android:text="Site Conditions"
+        android:id="@+id/site_cond_title"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/seasonality_title"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/site_amount"
+        android:layout_below="@+id/site_cond_title"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="@drawable/oval_background"
+        android:textColor="@color/material_teal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Soil Temperature"
+        android:id="@+id/soil_temp_title"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/site_amount"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/soil_temp_amount"
+        android:layout_below="@+id/soil_temp_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="@drawable/oval_background"
+        android:textColor="@color/material_teal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sunlight"
+        android:id="@+id/sunlight_title"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/soil_temp_amount"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/sunlight_amount"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/sunlight_title"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>

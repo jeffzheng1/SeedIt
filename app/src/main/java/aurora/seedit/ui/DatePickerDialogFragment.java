@@ -4,22 +4,17 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
-import android.net.Uri;
 import android.os.Bundle;
-import android.app.Fragment;
 import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.DatePicker;
-import android.widget.TextView;
 
 import java.util.Calendar;
 
 import aurora.seedit.R;
-import aurora.seedit.utils.CircleDisplay;
 
-public class DatePickerFragment extends DialogFragment {
+public class DatePickerDialogFragment extends DialogFragment {
 
     public interface DatepickerDialogListener {
         public void onDialogPositiveClick(DialogFragment dialog, java.util.Date date);
@@ -28,7 +23,7 @@ public class DatePickerFragment extends DialogFragment {
 
     DatepickerDialogListener mListener;
 
-    public DatePickerFragment() {
+    public DatePickerDialogFragment() {
     }
 
     @Override
@@ -46,14 +41,14 @@ public class DatePickerFragment extends DialogFragment {
                     public void onClick(DialogInterface dialog, int id) {
                         // User clicked OK, so save the mSelectedItems results somewhere
                         // or return them to the component that opened the dialog
-                        mListener.onDialogPositiveClick(DatePickerFragment.this,
+                        mListener.onDialogPositiveClick(DatePickerDialogFragment.this,
                                 getDateFromDatePicker(datePicker));
                     }
                 })
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
-                        mListener.onDialogNegativeClick(DatePickerFragment.this);
+                        mListener.onDialogNegativeClick(DatePickerDialogFragment.this);
                     }
                 });
         // Create the AlertDialog object and return it

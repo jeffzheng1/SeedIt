@@ -39,7 +39,7 @@ public class SignupActivity extends ActionBarActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ButterKnife.inject(this);
 
-//        applyFont();
+        applyFont();
 
         mSignupButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,7 +96,7 @@ public class SignupActivity extends ActionBarActivity {
     }
 
     private void applyFont() {
-        Typeface type = Typeface.createFromAsset(getAssets(), "fonts/Lato-Light.ttf");
+        Typeface type = Typeface.createFromAsset(getAssets(), "fonts/Lato-Regular.ttf");
         mFacebookSignupButton.setTypeface(type);
         mGoogleSignupButton.setTypeface(type);
 //        mFirstNameField.setTypeface(type);
@@ -104,8 +104,10 @@ public class SignupActivity extends ActionBarActivity {
         mSignupEmailField.setTypeface(type);
         mSignupPasswordField.setTypeface(type);
         mSignupButton.setTypeface(type);
+        mFacebookSignupButton.setTransformationMethod(null);
+        mGoogleSignupButton.setTransformationMethod(null);
+        mSignupButton.setTransformationMethod(null);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

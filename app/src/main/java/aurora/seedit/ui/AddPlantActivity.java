@@ -23,9 +23,9 @@ public class AddPlantActivity extends ActionBarActivity {
 
     protected ParseRelation mPlantsRelation;
     protected ParseUser mCurrentUser;
-    @InjectView(R.id.seedit_plant_button) ImageButton mSeeditPlantButton;
-    @InjectView(R.id.custom_plant_button) ImageButton mCustomPlantButton;
-    @InjectView(R.id.recent_plant_button) ImageButton mRecentPlantButton;
+    @InjectView(R.id.seedit_plant_button) Button mSeeditPlantButton;
+    @InjectView(R.id.custom_plant_button) Button mCustomPlantButton;
+    @InjectView(R.id.recent_plant_button) Button mRecentPlantButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,21 +34,38 @@ public class AddPlantActivity extends ActionBarActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ButterKnife.inject(this);
 
-//        applyFont();
+        applyFont();
         mCustomPlantButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AddPlantActivity.this, AddCustomPlantActivity.class);
+                intent.putExtra("plant_name", "NULL");
+                startActivity(intent);
+            }
+        });
+
+        mSeeditPlantButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddPlantActivity.this, AddSeeditPlantActivity.class);
                 startActivity(intent);
             }
         });
     }
 
-//    private void applyFont() {
-//        Typeface type = Typeface.createFromAsset(getAssets(), "fonts/Lato-Light.ttf");
-//        mSeeditPlantText.setTypeface(type);
-//        mCustomPlantText.setTypeface(type);
-//        mRecentPlantText.setTypeface(type);
+    private void applyFont() {
+        Typeface type = Typeface.createFromAsset(getAssets(), "fonts/Lato-Medium.ttf");
+        mSeeditPlantButton.setTypeface(type);
+        mCustomPlantButton.setTypeface(type);
+        mRecentPlantButton.setTypeface(type);
+
+    }
+
+//    @Override
+//    public void onResume() {
+//        super.onResume();
+//        mCurrentUser = ParseUser.getCurrentUser();
+//        mCurrentUser.saveInBackground();
 //    }
 
     @Override

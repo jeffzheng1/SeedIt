@@ -11,6 +11,7 @@ import android.graphics.Paint.Align;
 import android.graphics.Paint.Style;
 import android.graphics.PointF;
 import android.graphics.RectF;
+import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -119,6 +120,8 @@ public class CircleDisplay extends View implements OnGestureListener {
         mInnerCirclePaint.setColor(Color.WHITE);
 
         mTextPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        Typeface type = Typeface.createFromAsset(getContext().getAssets(), "fonts/Lato-Regular.ttf");
+        mTextPaint.setTypeface(type);
         mTextPaint.setStyle(Style.STROKE);
         mTextPaint.setTextAlign(Align.CENTER);
         mTextPaint.setColor(Color.BLACK);

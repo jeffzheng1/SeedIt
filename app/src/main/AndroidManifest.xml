@@ -24,8 +24,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <meta-data android:name="com.google.android.gms.version"
-                   android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
         <activity
             android:name=".ui.LoginActivity"
             android:label="@string/title_activity_login"
@@ -64,6 +67,18 @@
         <activity
             android:name=".ui.StoreActivity"
             android:label="@string/title_activity_store" >
+        </activity>
+        <activity
+            android:name=".ui.AddSeeditPlantActivity"
+            android:label="@string/title_activity_seedit_plant"
+            android:parentActivityName=".ui.AddPlantActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="aurora.seedit.ui.AddPlantActivity" />
+        </activity>
+        <activity
+            android:name=".adapters.SeeditPlantsListAdapter"
+            android:label="@string/title_activity_seedit_plants_list_adapter" >
         </activity>
     </application>
 

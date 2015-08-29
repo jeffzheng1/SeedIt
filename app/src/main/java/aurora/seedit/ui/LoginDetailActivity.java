@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.parse.LogInCallback;
 import com.parse.ParseException;
@@ -27,6 +28,7 @@ public class LoginDetailActivity extends ActionBarActivity {
     @InjectView(R.id.login_username_field) EditText mLoginUsername;
     @InjectView(R.id.login_password_field) EditText mLoginPasswordField;
     @InjectView(R.id.login_button) Button mLoginButton;
+    @InjectView(R.id.seedit_logo) ImageView mLogo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +36,8 @@ public class LoginDetailActivity extends ActionBarActivity {
         setContentView(R.layout.activity_login_detail);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ButterKnife.inject(this);
-//        applyFont();
+        mLogo.setRotation(45);
+        applyFont();
 
         mLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,12 +87,13 @@ public class LoginDetailActivity extends ActionBarActivity {
     }
 
     private void applyFont() {
-        Typeface type = Typeface.createFromAsset(getAssets(), "fonts/Lato-Light.ttf");
+        Typeface type = Typeface.createFromAsset(getAssets(), "fonts/Lato-Regular.ttf");
 //        mFirstNameField.setTypeface(type);
 //        mLastNameField.setTypeface(type);
         mLoginUsername.setTypeface(type);
         mLoginPasswordField.setTypeface(type);
         mLoginButton.setTypeface(type);
+        mLoginButton.setTransformationMethod(null);
     }
 
     @Override

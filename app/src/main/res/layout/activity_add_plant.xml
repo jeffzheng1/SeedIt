@@ -7,112 +7,23 @@
                 android:orientation="vertical"
                 android:weightSum="3.05">
 
-
-    <!--<LinearLayout-->
-        <!--android:orientation="horizontal"-->
-        <!--android:layout_width="fill_parent"-->
-        <!--android:padding="15dp"-->
-
-        <!--android:layout_height="175dp"-->
-        <!--android:layout_marginTop="114dp"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--android:layout_alignParentLeft="true"-->
-        <!--android:layout_alignParentStart="true"-->
-        <!--android:id="@+id/linearLayout"-->
-        <!--android:weightSum="1">-->
-
-        <!--<ImageButton-->
-            <!--android:layout_width="100dp"-->
-            <!--android:layout_height="100dp"-->
-            <!--android:id="@+id/seedit_plant_button"-->
-            <!--android:layout_gravity="center_vertical"-->
-            <!--android:src="@drawable/circle"-->
-            <!--android:background="@android:color/white"-->
-            <!--android:layout_weight=".33"-->
-            <!--android:layout_margin="5dp"/>-->
-
-
-        <!--<ImageButton-->
-            <!--android:layout_width="100dp"-->
-            <!--android:layout_height="100dp"-->
-            <!--android:id="@+id/custom_plant_button"-->
-            <!--android:layout_gravity="center_vertical"-->
-            <!--android:src="@drawable/circle"-->
-            <!--android:background="@android:color/white"-->
-            <!--android:layout_weight=".33"-->
-            <!--android:layout_margin="5dp"/>-->
-
-        <!--<ImageButton-->
-            <!--android:layout_width="100dp"-->
-            <!--android:layout_height="100dp"-->
-            <!--android:id="@+id/recent_plant_button"-->
-            <!--android:layout_gravity="center_vertical"-->
-            <!--android:src="@drawable/circle"-->
-            <!--android:background="@android:color/white"-->
-            <!--android:layout_weight=".33"-->
-            <!--android:layout_margin="5dp"/>-->
-
-    <!--</LinearLayout>-->
-
-    <!--<TextView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="Seedit Plants"-->
-        <!--android:id="@+id/seedit_plant_text"-->
-        <!--android:layout_below="@+id/linearLayout"-->
-        <!--android:layout_toLeftOf="@+id/custom_plant_text"-->
-        <!--android:layout_toStartOf="@+id/custom_plant_text"-->
-        <!--android:layout_marginRight="25dp"-->
-        <!--android:layout_marginEnd="30dp"/>-->
-
-    <!--<TextView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="Custom Plants"-->
-        <!--android:id="@+id/custom_plant_text"-->
-        <!--android:layout_below="@+id/linearLayout"-->
-        <!--android:layout_centerHorizontal="true"/>-->
-
-    <!--<TextView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="Recent Plants"-->
-        <!--android:id="@+id/recent_plant_text"-->
-        <!--android:layout_below="@+id/linearLayout"-->
-        <!--android:layout_toRightOf="@+id/custom_plant_text"-->
-        <!--android:layout_toEndOf="@+id/custom_plant_text"-->
-        <!--android:layout_marginLeft="25dp"-->
-        <!--android:layout_marginStart="30dp"/>-->
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <TextView
-            android:background="@color/nliveo_green_colorPrimary"
+        <Button
             android:textColor="@android:color/white"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:text="Seedit Plants"
-            android:textSize="20sp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignLeft="@+id/seedit_plant_button"
-            android:layout_alignRight="@+id/seedit_plant_button"
-            android:layout_alignEnd="@+id/seedit_plant_button"/>
-
-        <ImageButton
             android:textSize="30sp"
             android:gravity="center"
-            android:layout_marginBottom="23dp"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/seedit_plant_button"
-            android:background="@drawable/seedit_plant_image"
+            android:background="@drawable/seedit_plants_tinted"
             android:scaleType="fitXY"/>
 
     </RelativeLayout>
@@ -122,30 +33,18 @@
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <TextView
-            android:background="@color/polymer_blue_dark"
-            android:textColor="@android:color/white"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <Button
             android:text="Custom Plants"
-            android:textSize="20sp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignLeft="@+id/custom_plant_button"
-            android:layout_alignRight="@+id/custom_plant_button"
-            android:layout_alignEnd="@+id/custom_plant_button"/>
-
-        <ImageButton
+            android:textColor="@android:color/white"
             android:textSize="30sp"
             android:gravity="center"
-            android:layout_marginBottom="23dp"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/custom_plant_button"
-            android:background="@drawable/custom_plant_image"
+            android:background="@drawable/custom_plant_tinted"
             android:scaleType="fitXY"/>
 
     </RelativeLayout>
@@ -155,30 +54,18 @@
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <TextView
-            android:background="@color/polymer_purple_dark"
-            android:textColor="@android:color/white"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <Button
             android:text="Recent Plants"
-            android:textSize="20sp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignLeft="@+id/recent_plant_button"
-            android:layout_alignRight="@+id/recent_plant_button"
-            android:layout_alignEnd="@+id/recent_plant_button"/>
-
-        <ImageButton
+            android:textColor="@android:color/white"
             android:textSize="30sp"
             android:gravity="center"
-            android:layout_marginBottom="23dp"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/recent_plant_button"
-            android:background="@drawable/recent_plants_image"
+            android:background="@drawable/recent_plants_tinted"
             android:scaleType="fitXY"/>
 
     </RelativeLayout>
