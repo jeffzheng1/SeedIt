@@ -3,26 +3,16 @@ package aurora.seedit.ui;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
-import android.support.v7.internal.widget.AdapterViewCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.ExpandableListView;
-import android.widget.ListAdapter;
 import android.widget.Spinner;
-
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.HashMap;
-import java.util.List;
 
 import aurora.seedit.R;
 
@@ -43,8 +33,8 @@ public class LocationDialogFragment extends DialogFragment implements AdapterVie
     }
 
     public interface LocationDialogListener {
-        public void onDialogPositiveClick(DialogFragment dialog, String address);
-        public void onDialogNegativeClick(DialogFragment dialog);
+        void onDialogPositiveClick(DialogFragment dialog, String address);
+        void onDialogNegativeClick(DialogFragment dialog);
     }
 
     String[] states = {"AK","AL","AR","AZ","CA","CO","CT","DC","DE","FL","GA","GU","HI","IA",

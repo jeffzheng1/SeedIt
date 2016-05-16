@@ -1,26 +1,20 @@
 package aurora.seedit.ui;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
-import android.text.Spannable;
-import android.text.SpannableString;
+import android.support.v4.app.FragmentManager;
+import android.support.v7.app.ActionBar;
 import android.util.SparseIntArray;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.location.LocationServices;
 import com.parse.ParseUser;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import aurora.seedit.R;
-import aurora.seedit.utils.TypefaceSpan;
 import br.liveo.interfaces.NavigationLiveoListener;
 import br.liveo.navigationliveo.NavigationLiveo;
 

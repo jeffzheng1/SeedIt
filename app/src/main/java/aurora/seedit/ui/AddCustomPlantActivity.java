@@ -5,9 +5,9 @@ import android.graphics.Typeface;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
+import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -28,7 +28,6 @@ import com.parse.ParseUser;
 import java.util.List;
 
 import aurora.seedit.R;
-import aurora.seedit.utils.CurrentWeather;
 import aurora.seedit.utils.ParseConstants;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -52,17 +51,12 @@ public class AddCustomPlantActivity extends ActionBarActivity
 
     public static final String TAG = AddCustomPlantActivity.class.getSimpleName();
 
-//    @InjectView(R.id.plant_info_text) TextView mPlantInfoText;
-//    @InjectView(R.id.plant_time_text) TextView mPlantTimeText;
-//    @InjectView(R.id.plant_location_text) TextView mPlantLocationText;
     @InjectView(R.id.plant_date_layout) RelativeLayout mPlantDateLayout;
     @InjectView(R.id.plant_location_layout) RelativeLayout mPlantLocationLayout;
     @InjectView(R.id.plant_name_field) EditText mPlantNameField;
     @InjectView(R.id.plant_date_field) TextView mPlantDateField;
-//    @InjectView(R.id.plant_location_field) EditText mPlantLocationField;
     @InjectView(R.id.plant_location_field) TextView mPlantLocationField;
     @InjectView(R.id.add_plant_button) Button mAddPlantButton;
-//    @InjectView(R.id.outdoor_radio_group) RadioGroup mOutdoorRadioGroup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,8 +98,6 @@ public class AddCustomPlantActivity extends ActionBarActivity
         mAddPlantButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ParseObject plantProfile = createPlantProfile();
-//                save(plantProfile);
                 finish();
             }
         });
@@ -145,11 +137,6 @@ public class AddCustomPlantActivity extends ActionBarActivity
         }
     }
 
-//    protected void save(ParseObject plantProfile) {
-//        mPlantsRelation.add(plantProfile);
-//        mCurrentUser.saveInBackground();
-//    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -176,7 +163,6 @@ public class AddCustomPlantActivity extends ActionBarActivity
     public void onDialogPositiveClick(DialogFragment dialog, java.util.Date date) {
         mPlantDate = date;
         mPlantDateField.setText(dateParser(date.toString()));
-//        Log.v(TAG, date.toString());
     }
 
     @Override

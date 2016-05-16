@@ -1,31 +1,21 @@
 package aurora.seedit.adapters;
 
-import java.util.List;
-
-import android.graphics.Typeface;
-import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v4.app.FragmentActivity;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.parse.ParseObject;
+import java.util.List;
 
-import aurora.seedit.ui.AddCustomPlantActivity;
-import aurora.seedit.ui.PlantStatsDialogFragment;
-import aurora.seedit.ui.PlantInfoActivity;
-import aurora.seedit.utils.ParseConstants;
-import aurora.seedit.utils.SeeditPlantFunctions;
 import aurora.seedit.R;
+import aurora.seedit.ui.AddCustomPlantActivity;
+import aurora.seedit.ui.PlantInfoActivity;
+import aurora.seedit.utils.SeeditPlantFunctions;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class SeeditPlantsListAdapter extends ArrayAdapter<String> {
@@ -62,7 +52,7 @@ public class SeeditPlantsListAdapter extends ArrayAdapter<String> {
         holder.nameLabel.setText(plantName);
 
         //Set picture for plant info activity
-        holder.iconImageView.setImageDrawable(mContext.getResources().getDrawable(SeeditPlantFunctions.plantToImage(plantName)));
+        holder.iconImageView.setImageResource(SeeditPlantFunctions.plantToImage(plantName));
         holder.plantInfoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

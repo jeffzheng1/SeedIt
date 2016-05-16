@@ -1,14 +1,10 @@
 package aurora.seedit.adapters;
 
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
-import android.content.Context;
-import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,11 +16,15 @@ import android.widget.TextView;
 
 import com.parse.ParseObject;
 
-import aurora.seedit.ui.PlantStatsDialogFragment;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+
+import aurora.seedit.R;
 import aurora.seedit.ui.PlantInfoActivity;
+import aurora.seedit.ui.PlantStatsDialogFragment;
 import aurora.seedit.utils.ParseConstants;
 import aurora.seedit.utils.SeeditPlantFunctions;
-import aurora.seedit.R;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class GardenListAdapter extends ArrayAdapter<ParseObject> {
