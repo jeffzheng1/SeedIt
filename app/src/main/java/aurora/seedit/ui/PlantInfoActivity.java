@@ -3,10 +3,10 @@ package aurora.seedit.ui;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.net.Uri;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
+import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,7 +15,6 @@ import android.widget.TextView;
 
 import aurora.seedit.R;
 import aurora.seedit.utils.SeeditPlantFunctions;
-
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -54,7 +53,7 @@ public class PlantInfoActivity extends ActionBarActivity {
             mPlantName = extras.getString("plant_name");
             mPlantInfoName.setText(mPlantName);
             int resourceId = SeeditPlantFunctions.plantToImage(mPlantName);
-            mPlantInfoProfPic.setImageDrawable(getDrawable(resourceId));
+            mPlantInfoProfPic.setImageResource(resourceId);
             mPlantInfoProfPic.setBorderWidth(3);
             mPlantInfoProfPic.setBorderColor(getResources().getColor(R.color.seedit_green));
         }

@@ -2,20 +2,17 @@ package aurora.seedit.ui;
 
 import android.content.Intent;
 import android.graphics.Typeface;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.TextView;
 
 import com.parse.ParseRelation;
 import com.parse.ParseUser;
 
 import aurora.seedit.R;
-import aurora.seedit.utils.ParseConstants;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
@@ -60,13 +57,6 @@ public class AddPlantActivity extends ActionBarActivity {
         mRecentPlantButton.setTypeface(type);
 
     }
-
-//    @Override
-//    public void onResume() {
-//        super.onResume();
-//        mCurrentUser = ParseUser.getCurrentUser();
-//        mCurrentUser.saveInBackground();
-//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

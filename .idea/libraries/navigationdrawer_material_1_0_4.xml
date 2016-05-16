@@ -5,6 +5,8 @@
       <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/br.com.liveo/navigationdrawer-material/1.0.4/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/br.com.liveo/navigationdrawer-material/1.0.4/e8f43d563052f14be28d56877e59ca2aba7e1e51/navigationdrawer-material-1.0.4-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

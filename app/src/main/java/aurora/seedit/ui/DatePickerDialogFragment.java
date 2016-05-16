@@ -17,8 +17,8 @@ import aurora.seedit.R;
 public class DatePickerDialogFragment extends DialogFragment {
 
     public interface DatepickerDialogListener {
-        public void onDialogPositiveClick(DialogFragment dialog, java.util.Date date);
-        public void onDialogNegativeClick(DialogFragment dialog);
+        void onDialogPositiveClick(DialogFragment dialog, java.util.Date date);
+        void onDialogNegativeClick(DialogFragment dialog);
     }
 
     DatepickerDialogListener mListener;

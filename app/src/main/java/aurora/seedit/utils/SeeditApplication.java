@@ -7,7 +7,6 @@ package aurora.seedit.utils;
 import android.app.Application;
 
 import com.parse.Parse;
-import com.parse.ParseObject;
 
 public class SeeditApplication extends Application {
 
@@ -16,8 +15,8 @@ public class SeeditApplication extends Application {
         super.onCreate();
         Parse.enableLocalDatastore(this);
         Parse.initialize(this,
-                "ZKc458o6x7nw1ZBzfEOUNauGwS1GA8mj2AmOhQ6V",
-                "AYFHMbESbR2zBElIYvYVFqY8sNgU1ZwwulSisUem");
+                "your_keys",
+                "your_keys");
     }
 }
 

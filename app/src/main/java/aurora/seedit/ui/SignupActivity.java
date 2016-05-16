@@ -3,13 +3,12 @@ package aurora.seedit.ui;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -99,8 +98,6 @@ public class SignupActivity extends ActionBarActivity {
         Typeface type = Typeface.createFromAsset(getAssets(), "fonts/Lato-Regular.ttf");
         mFacebookSignupButton.setTypeface(type);
         mGoogleSignupButton.setTypeface(type);
-//        mFirstNameField.setTypeface(type);
-//        mLastNameField.setTypeface(type);
         mSignupEmailField.setTypeface(type);
         mSignupPasswordField.setTypeface(type);
         mSignupButton.setTypeface(type);
@@ -112,7 +109,6 @@ public class SignupActivity extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.menu_signup, menu);
         return true;
     }
 

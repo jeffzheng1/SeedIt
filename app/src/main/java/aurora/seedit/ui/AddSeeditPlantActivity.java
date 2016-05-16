@@ -1,24 +1,15 @@
 package aurora.seedit.ui;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.ListView;
-
-import com.parse.FindCallback;
-import com.parse.ParseException;
-import com.parse.ParseObject;
-import com.parse.ParseQuery;
-import com.parse.ParseUser;
 
 import java.util.List;
 
 import aurora.seedit.R;
-import aurora.seedit.adapters.GardenListAdapter;
 import aurora.seedit.adapters.SeeditPlantsListAdapter;
-import aurora.seedit.utils.ParseConstants;
 import aurora.seedit.utils.SeeditPlantFunctions;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
